@@ -3,65 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petshop Patinhas Felizes - Produtos</title>
+  <title>Produtos - Petshop Patinhas Felizes</title>
+  
+  <link href="custom.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>Petshop Patinhas Felizes</h1>
-    <nav>
-      <a href="index.html">Início</a> |
-      <a href="produtos.html">Produtos</a> |
-      <a href="servicos.html">Serviços</a> |
-      <a href="contato.html">Contato</a>
+
+  <!-- Navbar -->
+  <header class="text-white p-4 mb-4">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="imagens/logo.png" alt="Marca de patinha em formato de coração" class="mx-3 img-fluid" style="width: 2em;">
+          <h4 class="mt-2" style="color: #FE8688">Patinhas Felizes</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText hover">
+          <ul class="navbar-nav me-auto my-2 mb-lg-0">
+            <li class="nav-item mx-2">
+              <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" aria-current="page" href="index.html">Início</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="produtos.html">Produtos</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="servicos.html">Serviços</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="contato.html">Contato</a>
+            </li>
+          </ul>
+          <div class="navbar-text list-unstyled">
+            <li class="nav-item dropdown dropstart">
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </a>
+          <ul class="dropdown-menu dropdown-menu-start p-3" style="width: 260px">
+            <form>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="seuemail@email.com" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="loginSenha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="loginSenha" placeholder="••••••••" required>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="lembrarLogin">
+                <label class="form-check-label" for="lembrarLogin">
+                  Lembrar-me
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 mb-2">
+                Entrar
+              </button>
+              <div>              
+                <a href="#" class="mx-auto">Ainda não tem cadastro?</a>
+              </div>
+
+            </form>
+          </ul>
+            </li>          
+        </div>
+      </div>
+    </div>
     </nav>
-    <hr>
   </header>
 
-  <main>
-    <h2>Produtos</h2>
-    <p>Conheça alguns de nossos produtos disponíveis em loja.</p>
 
-    <h3>Rações</h3>
-    <section>
-      <article>
-        <img src="imagens/racao1.png" alt="Ração Premium para cães" width="200">
-        <p>Ração Premium para Cães Adultos 10kg — R$ 89,90</p>
-      </article>
-      <article>
-        <img src="imagens/racao2.png" alt="Ração sabor salmão para gatos" width="200">
-        <p>Ração Sabor Salmão para Gatos 10kg — R$ 79,90</p>
-      </article>
-    </section>
 
-    <h3>Brinquedos</h3>
-    <section>
-      <article>
-        <img src="imagens/brinquedo1.jpg" alt="Bola de borracha" width="200">
-        <p>Bola de Borracha Reforçada — R$ 25,00</p>
-      </article>
-      <article>
-        <img src="imagens/brinquedo2.jpg" alt="Corda interativa" width="200">
-        <p>Corda Interativa para Cães — R$ 29,00</p>
-      </article>
-    </section>
+  <div class="container">
 
-    <h3>Acessórios</h3>
-    <section>
-      <article>
-        <img src="imagens/acessorio1.jpg" alt="Coleira azul" width="200">
-        <p>Coleira Ajustável Azul — R$ 39,90</p>
-      </article>
-      <article>
-        <img src="imagens/acessorio2.jpg" alt="Caminha pet confortável" width="200">
-        <p>Caminha Pet Confortável — R$ 149,90</p>
-      </article>
-    </section>
-  </main>
+    <h2 class="mb-4">Produtos</h2>
+    <p class="lead">Selecionamos produtos especialmente para seu pet:</p>
 
-  <hr>
-  <footer>
-    <p>© 2025 Petshop Patinhas Felizes — Todos os direitos reservados.</p>
-    <p>Contato: patinhasfelizes@gmail.com | (55) 99999-9999</p>
+
+    <h3 class="mt-4">Rações</h3>
+
+    <div class="row">
+      <a class="col-md-4" href="#">
+          <img src="imagens/racao1.png" class="img-fluid mb-2 w-75" alt="Ração premium para cães">
+          <p>Ração Premium para Cães — R$ 89,90</p>
+      </a>
+
+
+      <a class="col-md-4" href="#">
+        <img src="imagens/racao2.png" class="img-fluid mb-2 w-75" alt="Ração sabor salmão para gatos">
+        <p>Ração Salmão para gatos — R$ 75,90</p>
+      </a>
+    </div>
+
+
+    <h3 class="mt-4">Brinquedos</h3>
+
+    <div class="row">
+      <a class="col-md-4" href="#">
+        <img src="imagens/brinquedo1.jpg" class="img-fluid mb-2 w-75" alt="Bola azul">
+        <p>Bola reforçada — R$ 25,00</p>
+      </a>
+
+      <a class="col-md-4" href="#">
+        <img src="imagens/brinquedo2.jpg" class="img-fluid mb-2 w-75" alt="Corda interativa colorida">
+        <p>Corda interativa — R$ 39,90</p>
+      </a>
+    </div>
+
+
+    <h3 class="mt-4">Acessórios</h3>
+
+    <div class="row">
+      <a class="col-md-4" href="#">
+        <img src="imagens/acessorio1.jpg" class="img-fluid mb-2 w-75" alt="Coleira azul com fecho metálico">
+        <p>Coleira premium — R$ 29,90</p>
+      </a>
+
+      <a class="col-md-4" href="#">
+        <img src="imagens/acessorio2.jpg" class="img-fluid mb-2 w-75" alt="Caminha acolchoada para cães pequenos">
+        <p>Caminha confortável — R$ 149,90</p>
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="bg-dark text-white mt-5 p-3 text-center">
+    © 2025 Petshop Patinhas Felizes • Telefone: (55) 99999-9999
   </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
